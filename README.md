@@ -1,6 +1,6 @@
-# ---Nginx多域名代理以及Dnsmasq服务器部署---
+## ---Nginx多域名代理以及Dnsmasq服务器部署---
 
-# 1、 ubuntu16.04下安装Nginx（通过ubuntu安装源进行安装）
+### 1、 ubuntu16.04下安装Nginx（通过ubuntu安装源进行安装）
 
     $:sudo apt-get update
     $:sudo apt-get install nginx
@@ -57,7 +57,7 @@
        deb-src http://mirrors.163.com/ubuntu/ trusty-proposed main restricted universe multiverse
        deb-src http://mirrors.163.com/ubuntu/ trusty-backports main restricted universe multiverse
        
-# 2、Nginx配置文件修改
+### 2、Nginx配置文件修改
 
    a、编辑nginx.conf配置文件：
     
@@ -305,7 +305,7 @@
         
    说明：IP指部署网站所在的服务器的IP地址，如网站部署在192.168.5.10上，则IP就设为该IP地址
          
-# 3、Dnsmasq服务器配置
+### 3、Dnsmasq服务器配置
 
    a、安装Dnsmasq：
       
@@ -324,7 +324,7 @@
     
       $:systemctl restart dnsmasq
       
- # 4、测试局域网是否能正常访问（两种方法）
+### 4、测试局域网是否能正常访问（两种方法）
  
    方法a、将所有局域网内的客户端网络DNS均设为Dnsmasq服务器IP地址
      打开网络和共享中心->本地连接->属性->IPV4->使用下面的DNS服务器地址，将Dnsmasq服务器IP地址填入
